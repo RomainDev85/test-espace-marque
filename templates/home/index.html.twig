@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Les films</h1>
+    {% for movie in movies %}
+    <a href="{{ path('app_about_movie', {movie: movie.id}) }} ">{{ movie.title }}</a>
+
+{% endfor %}
+
+{% endblock %}
